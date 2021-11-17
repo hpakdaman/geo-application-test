@@ -1,0 +1,22 @@
+{
+    "sourceFile": "routes/web.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1637039482951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1637039496158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,4 @@\n \n $router->get('/', function () use ($router) {\n     return $router->app->version();\n });\n-\n-$router->get('/key', function() {\n-    return \\Illuminate\\Support\\Str::random(32);\n-});\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1637039482951,
+            "name": "Commit-0",
+            "content": "<?php\n\n/** @var \\Laravel\\Lumen\\Routing\\Router $router */\n\n/*\n|--------------------------------------------------------------------------\n| Application Routes\n|--------------------------------------------------------------------------\n|\n| Here is where you can register all of the routes for an application.\n| It is a breeze. Simply tell Lumen the URIs it should respond to\n| and give it the Closure to call when that URI is requested.\n|\n*/\n\n$router->get('/', function () use ($router) {\n    return $router->app->version();\n});\n\n$router->get('/key', function() {\n    return \\Illuminate\\Support\\Str::random(32);\n});"
+        }
+    ]
+}

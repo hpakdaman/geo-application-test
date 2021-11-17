@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Pizza Tower",
+        "latitude": 43.723014,
+        "longitude": 10.396628,
+        "radius": 0.01795
+    },
+    {
+        "id": 2,
+        "name": "Hotel Pisa",
+        "latitude": 43.724615,
+        "longitude": 10.397755,
+        "radius": 0.0433
+    },
+    {
+        "id": 3,
+        "name": "Hotel Villa Kinzica",
+        "latitude": 43.722091,
+        "longitude": 10.397888,
+        "radius": 0.02274
+    },
+    {
+        "id": 4,
+        "name": "A circle (20 meter) near the spot",
+        "latitude": 43.723152,
+        "longitude": 10.397896,
+        "radius": 0.020
+    }
+]

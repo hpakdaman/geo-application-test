@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "4f949526-a4e1-4f9f-aa41-24b2ddd94159",
+		"name": "Geo Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POI : index",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/poies/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"poies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POI : show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/poies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"poies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POI : update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "_method",
+						"value": "PUT",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/poies/4?longitude=10.397897",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"poies",
+						"4"
+					],
+					"query": [
+						{
+							"key": "longitude",
+							"value": "10.397897"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POI : delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/poies/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"poies",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POI : create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/poies?id=5&name=test&latitude=43.722091&longitude=10.397888&radius=0.2274",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"poies"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						},
+						{
+							"key": "name",
+							"value": "test"
+						},
+						{
+							"key": "latitude",
+							"value": "43.722091"
+						},
+						{
+							"key": "longitude",
+							"value": "10.397888"
+						},
+						{
+							"key": "radius",
+							"value": "0.2274",
+							"description": "Kilometer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SPOT : index",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/spots/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"spots",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SPOT : create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/spots?latitude=43.723215&longitude=10.397700",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"spots"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "43.723215"
+						},
+						{
+							"key": "longitude",
+							"value": "10.397700"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

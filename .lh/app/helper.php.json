@@ -1,0 +1,50 @@
+{
+    "sourceFile": "app/helper.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1637039609111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1637039616750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n-function isInside($circle_x, $circle_y,\n+<?php\n+function inside($circle_x, $circle_y,\n                           $rad, $x, $y)\n {\n     // Compare radius of circle\n     // with distance of its center\n"
+                },
+                {
+                    "date": 1637039634722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n <?php\n-function inside($circle_x, $circle_y,\n+\n+function inside($poi_x, $poi_y,\n                           $rad, $x, $y)\n {\n-    // Compare radius of circle\n+    // Compare radius of poi\n     // with distance of its center\n     // from given point\n-    if (($x - $circle_x) * ($x - $circle_x) +\n-        ($y - $circle_y) * ($y - $circle_y) <=\n+    if (($x - $poi_x) * ($x - $poi_x) +\n+        ($y - $poi_y) * ($y - $poi_y) <=\n                                $rad * $rad)\n         return true;\n     else\n         return false;\n"
+                },
+                {
+                    "date": 1637039640221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\n \n function inside($poi_x, $poi_y,\n-                          $rad, $x, $y)\n+                          $poi_rad, $x, $y)\n {\n     // Compare radius of poi\n     // with distance of its center\n     // from given point\n"
+                },
+                {
+                    "date": 1637039646152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n {\n     // Compare radius of poi\n     // with distance of its center\n     // from given point\n-    if (($x - $poi_x) * ($x - $poi_x) +\n+    return  (($x - $poi_x) * ($x - $poi_x) +\n         ($y - $poi_y) * ($y - $poi_y) <=\n                                $rad * $rad)\n         return true;\n     else\n"
+                },
+                {
+                    "date": 1637039653013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,7 @@\n     // with distance of its center\n     // from given point\n     return  (($x - $poi_x) * ($x - $poi_x) +\n         ($y - $poi_y) * ($y - $poi_y) <=\n-                               $rad * $rad)\n-        return true;\n-    else\n-        return false;\n+                               $rad * $rad);\n+      \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637039658283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n {\n     // Compare radius of poi\n     // with distance of its center\n     // from given point\n-    return  (($x - $poi_x) * ($x - $poi_x) +\n+    return  ($x - $poi_x) * ($x - $poi_x) +\n         ($y - $poi_y) * ($y - $poi_y) <=\n                                $rad * $rad);\n       \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637039666481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,10 @@\n <?php\n \n function inside($poi_x, $poi_y,\n                           $poi_rad, $x, $y)\n-{\n-    // Compare radius of poi\n-    // with distance of its center\n-    // from given point\n+{ \n     return  ($x - $poi_x) * ($x - $poi_x) +\n         ($y - $poi_y) * ($y - $poi_y) <=\n-                               $rad * $rad);\n+                               $rad * $rad;\n       \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637039673015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,8 @@\n <?php\n \n-function inside($poi_x, $poi_y,\n-                          $poi_rad, $x, $y)\n+function inside($poi_x, $poi_y, $poi_rad, $x, $y)\n { \n-    return  ($x - $poi_x) * ($x - $poi_x) +\n-        ($y - $poi_y) * ($y - $poi_y) <=\n+    return  ($x - $poi_x) * ($x - $poi_x) +  ($y - $poi_y) * ($y - $poi_y) <=\n                                $rad * $rad;\n       \n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1637039609110,
+            "name": "Commit-0",
+            "content": "function isInside($circle_x, $circle_y,\n                          $rad, $x, $y)\n{\n    // Compare radius of circle\n    // with distance of its center\n    // from given point\n    if (($x - $circle_x) * ($x - $circle_x) +\n        ($y - $circle_y) * ($y - $circle_y) <=\n                               $rad * $rad)\n        return true;\n    else\n        return false;\n}"
+        }
+    ]
+}

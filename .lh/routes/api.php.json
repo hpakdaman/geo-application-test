@@ -1,0 +1,170 @@
+{
+    "sourceFile": "routes/api.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 38,
+            "patches": [
+                {
+                    "date": 1637039817586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1637039824972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,7 @@\n | and give it the Closure to call when that URI is requested.\n |\n */\n \n-$router->get('/poi', function () use ($router) {\n+$router->resourse('/poi', function () use ($router) {\n     return $router->app->version();\n });\n"
+                },
+                {
+                    "date": 1637039830390,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,6 @@\n |\n */\n \n $router->resourse('/poi', function () use ($router) {\n-    return $router->app->version();\n+   \n });\n"
+                },
+                {
+                    "date": 1637039838629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,5 @@\n | and give it the Closure to call when that URI is requested.\n |\n */\n \n-$router->resourse('/poi', function () use ($router) {\n-   \n-});\n+$router->resourse('/poi','poi');\n"
+                },
+                {
+                    "date": 1637039845551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,5 @@\n | and give it the Closure to call when that URI is requested.\n |\n */\n \n-$router->resourse('/poi','poi');\n+$router->resourse('/poi','Poi');\n"
+                },
+                {
+                    "date": 1637039857253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,5 @@\n | and give it the Closure to call when that URI is requested.\n |\n */\n \n-$router->resourse('/poi','Poi');\n+$router->resourse('/poi','PoiResourseController');\n"
+                },
+                {
+                    "date": 1637039918786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,5 @@\n | and give it the Closure to call when that URI is requested.\n |\n */\n \n-$router->resourse('/poi','PoiResourseController');\n+$router->resourse('/poi/create','PoiResourseController');\n"
+                },
+                {
+                    "date": 1637039942650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,4 +13,5 @@\n |\n */\n \n $router->resourse('/poi/create','PoiResourseController');\n+$router->resourse('/poi/create','PoiResourseController');\n"
+                },
+                {
+                    "date": 1637039949654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n | and give it the Closure to call when that URI is requested.\n |\n */\n \n+$router->get('/pois','PoiResourseController');\n $router->resourse('/poi/create','PoiResourseController');\n-$router->resourse('/poi/create','PoiResourseController');\n"
+                },
+                {
+                    "date": 1637039967432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n | and give it the Closure to call when that URI is requested.\n |\n */\n \n-$router->get('/pois','PoiResourseController');\n+$router->get('/poies','PoiController');\n $router->resourse('/poi/create','PoiResourseController');\n"
+                },
+                {
+                    "date": 1637039975749,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n | and give it the Closure to call when that URI is requested.\n |\n */\n \n-$router->get('/poies','PoiController');\n+$router->get('/poies','PoiController','as');\n $router->resourse('/poi/create','PoiResourseController');\n"
+                },
+                {
+                    "date": 1637039982907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n | and give it the Closure to call when that URI is requested.\n |\n */\n \n-$router->get('/poies','PoiController','as');\n+$router->get('/poies','PoiController',);\n $router->resourse('/poi/create','PoiResourseController');\n"
+                },
+                {
+                    "date": 1637040025469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n | and give it the Closure to call when that URI is requested.\n |\n */\n \n-$router->get('/poies','PoiController',);\n+$router->get('/poies','PoiController');\n $router->resourse('/poi/create','PoiResourseController');\n"
+                },
+                {
+                    "date": 1637040047938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n | and give it the Closure to call when that URI is requested.\n |\n */\n \n-$router->get('/poies','PoiController');\n+$router->get('/poies',['uses'=>'PoiController',]);\n $router->resourse('/poi/create','PoiResourseController');\n"
+                },
+                {
+                    "date": 1637040055406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n | and give it the Closure to call when that URI is requested.\n |\n */\n \n-$router->get('/poies',['uses'=>'PoiController',]);\n+$router->get('/poies',['uses'=>'PoiController','as'=>'poi.index']);\n $router->resourse('/poi/create','PoiResourseController');\n"
+                },
+                {
+                    "date": 1637040061168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,6 +12,6 @@\n | and give it the Closure to call when that URI is requested.\n |\n */\n \n-$router->get('/poies',['uses'=>'PoiController','as'=>'poi.index']);\n+$router->get('/poies',['uses'=>'PoiController','as'=>'poies.index']);\n $router->resourse('/poi/create','PoiResourseController');\n"
+                },
+                {
+                    "date": 1637040070310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,6 @@\n |\n */\n \n $router->get('/poies',['uses'=>'PoiController','as'=>'poies.index']);\n+$router->get('/poies/create',['uses'=>'PoiController','as'=>'poies.index']);\n $router->resourse('/poi/create','PoiResourseController');\n"
+                },
+                {
+                    "date": 1637040077533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,6 +13,7 @@\n |\n */\n \n $router->get('/poies',['uses'=>'PoiController','as'=>'poies.index']);\n-$router->get('/poies/create',['uses'=>'PoiController','as'=>'poies.index']);\n+$router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create\n+']);\n $router->resourse('/poi/create','PoiResourseController');\n"
+                },
+                {
+                    "date": 1637040089080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,6 @@\n |\n */\n \n $router->get('/poies',['uses'=>'PoiController','as'=>'poies.index']);\n-$router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create\n-']);\n-$router->resourse('/poi/create','PoiResourseController');\n+$router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n+$router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040097606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,5 @@\n */\n \n $router->get('/poies',['uses'=>'PoiController','as'=>'poies.index']);\n $router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n-$router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n\\ No newline at end of file\n+$router->post('/poies',['uses'=>'PoiController','as'=>'photos.create']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040103241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,6 @@\n */\n \n $router->get('/poies',['uses'=>'PoiController','as'=>'poies.index']);\n $router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n-$router->post('/poies',['uses'=>'PoiController','as'=>'photos.create']); \n\\ No newline at end of file\n+$router->post('/poies',['uses'=>'PoiController','as'=>'photos.store\n+']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040110575,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,6 +14,6 @@\n */\n \n $router->get('/poies',['uses'=>'PoiController','as'=>'poies.index']);\n $router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n-$router->post('/poies',['uses'=>'PoiController','as'=>'photos.store\n-']); \n\\ No newline at end of file\n+$router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n+$router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040116843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n \n $router->get('/poies',['uses'=>'PoiController','as'=>'poies.index']);\n $router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n $router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n-$router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n\\ No newline at end of file\n+$router->get('/poies/{}',['uses'=>'PoiController','as'=>'photos.store']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040132852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,5 @@\n \n $router->get('/poies',['uses'=>'PoiController','as'=>'poies.index']);\n $router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n $router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n-$router->get('/poies/{}',['uses'=>'PoiController','as'=>'photos.store']); \n\\ No newline at end of file\n+$router->get('/poies/{id}',['uses'=>'PoiController','as'=>'photos.show']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040142256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,6 @@\n \n $router->get('/poies',['uses'=>'PoiController','as'=>'poies.index']);\n $router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n $router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n+$router->get('/poies/{id}',['uses'=>'PoiController','as'=>'photos.show']); \n $router->get('/poies/{id}',['uses'=>'PoiController','as'=>'photos.show']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040153581,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,6 @@\n $router->get('/poies',['uses'=>'PoiController','as'=>'poies.index']);\n $router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n $router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n $router->get('/poies/{id}',['uses'=>'PoiController','as'=>'photos.show']); \n-$router->get('/poies/{id}',['uses'=>'PoiController','as'=>'photos.show']); \n\\ No newline at end of file\n+$router->get('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.edit']); \n+$router->get('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.edit']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040161651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,5 @@\n $router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n $router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n $router->get('/poies/{id}',['uses'=>'PoiController','as'=>'photos.show']); \n $router->get('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.edit']); \n-$router->get('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.edit']); \n\\ No newline at end of file\n+$router->put('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.edit']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040176140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,5 @@\n $router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n $router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n $router->get('/poies/{id}',['uses'=>'PoiController','as'=>'photos.show']); \n $router->get('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.edit']); \n-$router->put('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.edit']); \n\\ No newline at end of file\n+$router->put('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.update']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040182150,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,5 +17,6 @@\n $router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n $router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n $router->get('/poies/{id}',['uses'=>'PoiController','as'=>'photos.show']); \n $router->get('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.edit']); \n+$router->put('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.update']); \n $router->put('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.update']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040190199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,5 +18,5 @@\n $router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n $router->get('/poies/{id}',['uses'=>'PoiController','as'=>'photos.show']); \n $router->get('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.edit']); \n $router->put('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.update']); \n-$router->put('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.update']); \n\\ No newline at end of file\n+$router->delete('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.destroy']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040223029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,6 +17,6 @@\n $router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n $router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n $router->get('/poies/{id}',['uses'=>'PoiController','as'=>'photos.show']); \n $router->get('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.edit']); \n-$router->put('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.update']); \n-$router->delete('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.destroy']); \n\\ No newline at end of file\n+$router->put('/poies/{id}',['uses'=>'PoiController','as'=>'photos.update']); \n+$router->delete('/poies/{id}',['uses'=>'PoiController','as'=>'photos.destroy']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040292282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,6 @@\n $router->get('/poies',['uses'=>'PoiController','as'=>'poies.index']);\n $router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n $router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n $router->get('/poies/{id}',['uses'=>'PoiController','as'=>'photos.show']); \n-$router->get('/poies/{id}/edit',['uses'=>'PoiController','as'=>'photos.edit']); \n $router->put('/poies/{id}',['uses'=>'PoiController','as'=>'photos.update']); \n $router->delete('/poies/{id}',['uses'=>'PoiController','as'=>'photos.destroy']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040300052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,8 @@\n |\n */\n \n $router->get('/poies',['uses'=>'PoiController','as'=>'poies.index']);\n-$router->get('/poies/create',['uses'=>'PoiController','as'=>'photos.create']); \n $router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n $router->get('/poies/{id}',['uses'=>'PoiController','as'=>'photos.show']); \n $router->put('/poies/{id}',['uses'=>'PoiController','as'=>'photos.update']); \n $router->delete('/poies/{id}',['uses'=>'PoiController','as'=>'photos.destroy']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040367664,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n | and give it the Closure to call when that URI is requested.\n |\n */\n \n-$router->get('/poies',['uses'=>'PoiController','as'=>'poies.index']);\n+$router->get('/poies',['uses'=>'PoiController@index','as'=>'poies.index']);\n $router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n $router->get('/poies/{id}',['uses'=>'PoiController','as'=>'photos.show']); \n $router->put('/poies/{id}',['uses'=>'PoiController','as'=>'photos.update']); \n $router->delete('/poies/{id}',['uses'=>'PoiController','as'=>'photos.destroy']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040374374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n |\n */\n \n $router->get('/poies',['uses'=>'PoiController@index','as'=>'poies.index']);\n-$router->post('/poies',['uses'=>'PoiController','as'=>'photos.store']); \n-$router->get('/poies/{id}',['uses'=>'PoiController','as'=>'photos.show']); \n+$router->post('/poies',['uses'=>'PoiController@store','as'=>'photos.store']); \n+$router->get('/poies/{id}',['uses'=>'PoiController@show','as'=>'photos.show']); \n $router->put('/poies/{id}',['uses'=>'PoiController','as'=>'photos.update']); \n $router->delete('/poies/{id}',['uses'=>'PoiController','as'=>'photos.destroy']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040385192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n |\n */\n \n $router->get('/poies',['uses'=>'PoiController@index','as'=>'poies.index']);\n-$router->post('/poies',['uses'=>'PoiController@store','as'=>'photos.store']); \n-$router->get('/poies/{id}',['uses'=>'PoiController@show','as'=>'photos.show']); \n-$router->put('/poies/{id}',['uses'=>'PoiController','as'=>'photos.update']); \n-$router->delete('/poies/{id}',['uses'=>'PoiController','as'=>'photos.destroy']); \n\\ No newline at end of file\n+$router->post('/poies',['uses'=>'PoiController@store','as'=>'poies.store']); \n+$router->get('/poies/{id}',['uses'=>'PoiController@get','as'=>'poies.get']); \n+$router->put('/poies/{id}',['uses'=>'PoiController','as'=>'poies.update']); \n+$router->delete('/poies/{id}',['uses'=>'PoiController','as'=>'poies.destroy']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040390907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,6 +15,6 @@\n \n $router->get('/poies',['uses'=>'PoiController@index','as'=>'poies.index']);\n $router->post('/poies',['uses'=>'PoiController@store','as'=>'poies.store']); \n $router->get('/poies/{id}',['uses'=>'PoiController@get','as'=>'poies.get']); \n-$router->put('/poies/{id}',['uses'=>'PoiController','as'=>'poies.update']); \n-$router->delete('/poies/{id}',['uses'=>'PoiController','as'=>'poies.destroy']); \n\\ No newline at end of file\n+$router->put('/poies/{id}',['uses'=>'PoiController@update','as'=>'poies.update']); \n+$router->delete('/poies/{id}',['uses'=>'PoiController@','as'=>'poies.destroy']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040397520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,7 +14,7 @@\n */\n \n $router->get('/poies',['uses'=>'PoiController@index','as'=>'poies.index']);\n $router->post('/poies',['uses'=>'PoiController@store','as'=>'poies.store']); \n-$router->get('/poies/{id}',['uses'=>'PoiController@get','as'=>'poies.get']); \n+$router->get('/poies/{id}',['uses'=>'PoiController@show','as'=>'poies.show']); \n $router->put('/poies/{id}',['uses'=>'PoiController@update','as'=>'poies.update']); \n $router->delete('/poies/{id}',['uses'=>'PoiController@','as'=>'poies.destroy']); \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1637040402823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,5 @@\n $router->get('/poies',['uses'=>'PoiController@index','as'=>'poies.index']);\n $router->post('/poies',['uses'=>'PoiController@store','as'=>'poies.store']); \n $router->get('/poies/{id}',['uses'=>'PoiController@show','as'=>'poies.show']); \n $router->put('/poies/{id}',['uses'=>'PoiController@update','as'=>'poies.update']); \n-$router->delete('/poies/{id}',['uses'=>'PoiController@','as'=>'poies.destroy']); \n\\ No newline at end of file\n+$router->delete('/poies/{id}',['uses'=>'PoiController@destroy','as'=>'poies.destroy']); \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1637039817586,
+            "name": "Commit-0",
+            "content": "<?php\n\n/** @var \\Laravel\\Lumen\\Routing\\Router $router */\n\n/*\n|--------------------------------------------------------------------------\n| Application Routes\n|--------------------------------------------------------------------------\n|\n| Here is where you can register all of the routes for an application.\n| It is a breeze. Simply tell Lumen the URIs it should respond to\n| and give it the Closure to call when that URI is requested.\n|\n*/\n\n$router->get('/poi', function () use ($router) {\n    return $router->app->version();\n});\n"
+        }
+    ]
+}

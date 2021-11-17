@@ -1,0 +1,15 @@
+[
+    {
+        "latitude": 43.723215,
+        "longitude": 10.3977,
+        "near": [
+            {
+                "id": 4,
+                "name": "A circle (20 meter) Near the spot",
+                "latitude": 43.723152,
+                "longitude": 10.397896,
+                "radius": 0.02
+            }
+        ]
+    }
+]
