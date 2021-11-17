@@ -20,7 +20,6 @@ class POIController extends Controller
         ]);
 
         $args = array_values($request->only('id', 'name', 'latitude', 'longitude', 'radius'));
-        // adds new Item to collection
         $poi = Poi::make()->add(...$args);
         return ['done' => true, 'message' => 'saved.', 'poi' => $poi];
     }

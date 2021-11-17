@@ -52,7 +52,7 @@ class Spot
      * adds a new spot and find its nearest coordinates
      * @param $latitude
      * @param $longitude
-     * @return Spot
+     * @return array
      */
     public function add($latitude, $longitude)
     {
@@ -69,7 +69,7 @@ class Spot
      * update an spot
      * @param $index
      * @param $changes
-     * @return void
+     * @return bool
      */
     public function update($index, $changes)
     {

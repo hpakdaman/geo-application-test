@@ -23,8 +23,6 @@ class SpotController extends Controller
             'longitude' => 'required',
         ]);
 
-
-        // adds new Item to collection
         $spot = Spot::make()->add($request->input('latitude'), $request->input('longitude'));
         return ['done' => true, 'message' => 'saved.', 'spot' => $spot];
     }

@@ -101,41 +101,43 @@ class Poi
         if (!$this->exists($ID))
             throw new \Exception('The given POI doesn\'t exists!');
 
+        // removes
         $this->data = $this->data->filter(function ($poi) use($ID) {
             return $poi['id'] != $ID;
         });
         $saved = $this->save();
 
 
-        $sp = Spot::make();
-        // deleted POI should be removed from spots also
-        foreach ($sp->get() as $i => $spot) {
+        $factory = Spot::make();
+        // deleted POI should be removed from the spots also
+        foreach ($factory->get() as $i => $spot) {
+            // get all areas except that removed POI
             $area=array_filter($spot['near'],function ($poi) use($ID) {
                 return $poi['id'] != $ID;
             });
-            $sp->update($i,['near'=>$area]);
+            $factory->update($i,['near'=>$area]);
         }
         return $saved;
     }
 
     /**
-     * updates all spots by considering according to the given POI
+     * updates all spots according to the given POI
      * @param $poi
      * @return void
      * @throws \Exception
      */
     private static function updateSpotsForPoi($poi)
     {
-        $sp = Spot::make();
-        foreach ($sp->get() as $i => $spot) {
+        $factory = Spot::make();
+        foreach ($factory->get() as $i => $spot) {
             // check spots if they are near POI
             if (Spot::isInside($spot, $poi)) {
-                // first , finds the existing POI in near array and remove it
+                // first , finds the existing POI in "near" field then remove it
                 $near = array_filter($spot['near'], function ($np) use ($poi) {
                     return $np['id'] != $poi['id'];
                 });
-                // then add the updated one
-                $sp->update($i, ['near' => array_merge($near, [$poi])]);
+                // then adds the updated one
+                $factory->update($i, ['near' => array_merge($near, [$poi])]);
             }
         }
     }
