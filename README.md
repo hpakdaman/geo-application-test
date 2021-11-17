@@ -18,6 +18,6 @@ if your radius is `200` meters so you should enter `0.20`
 `200/1000 = 0.20`
 
 
-For accessing to all of API's urls, Install postman from [this link](https://www.postman.com/downloads/) and then import [this project](https://www.postman.com/downloads/) to postman.
+For accessing to all of API's urls, Install postman from [this link](https://www.postman.com/downloads/) and then import [this project](https://github.com/hpakdaman/geo-application-test/blob/main/Geo%20Application.postman_collection.json) to postman.
 
  
